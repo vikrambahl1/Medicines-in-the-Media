@@ -6,7 +6,7 @@
   "scripts": {
     "watch": "webpack -d --watch",
     "build": "webpack",
-    "serve": "serve ./public --port 9000"
+    "serve": "serve ./public --port 9001"
   },
   "devDependencies": {
     "axios": "^0.15.3",

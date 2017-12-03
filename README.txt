@@ -9,11 +9,19 @@ Additionally, you will need to retrieve API keys for the NY Times and the Guardi
 events are loaded into CSVs which are then loaded into Postgres. Twitter and ADR events are loaded
 into MongoDB.
 
+Currently deployed at:
+http://medicine.usnewsmap.com/
+
+To view a specific drug name:
+http://medicine.usnewsmap.com/?q=fluoxetine
+
 ## INSTALLATION
 
 ### general
 1. Get NY Times API key - https://developer.nytimes.com/
 2. Get a Guardian API key - http://open-platform.theguardian.com/documentation/
+3. Make sure you have Python 2.7 installed - https://www.python.org/download/releases/2.7/
+4. Install pip Python package manager - https://pip.pypa.io/en/stable/installing/
 
 ### data
 
@@ -50,7 +58,7 @@ For easy of use in importing and exploring data - https://www.jetbrains.com/data
 ### api
 
 #### Flask
-TODO
+1. Install flask `pip install Flask` http://flask.pocoo.org/
 
 #### Media Scraping
 TODO
@@ -78,7 +86,7 @@ TODO
 ## EXECUTION
 
 ### api
-TODO
+From CODE/api, `FLASK_APP=api.py flask run`, the application will be running on port 5000
 
 ### ui
-From CODE/ui, run `npm run serve`, the application will be running on port 9000
+From CODE/ui, run `npm run serve`, the application will be running on port 9001 (or change port in package.json)
