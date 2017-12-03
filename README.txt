@@ -61,9 +61,11 @@ For easy of use in importing and exploring data - https://www.jetbrains.com/data
 1. Install flask `pip install Flask` http://flask.pocoo.org/
 
 #### Media Scraping
-TODO
+1. Run CODE/NewsScrape/NYT/getTimesArticles.py to gather all articles (up to 1000 in total) from the past 25 years on the top 125 drugs by prescription volume, sorted by relevance
+2. Run CODE/NewsScrape/The_Guardian/getGuardianArticles.py to gather all articles (no limit) from the past 25 years on the top 125 drugs by prescription volume, sorted by relevance
+3. Using a text editor, combine the two outputs into a single file.
+4. Import int 'events' table with event type 'ARTICLE'
 
-(This is then loaded into events table as event type `ARTICLE`.)
 
 #### Twitter ADR Detection
 TODO
