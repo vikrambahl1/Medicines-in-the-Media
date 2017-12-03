@@ -68,9 +68,30 @@ For easy of use in importing and exploring data - https://www.jetbrains.com/data
 
 
 #### Twitter ADR Detection
-TODO
 
-(This is then loaded into events table as event type `ADR`.)
+1.Setup the following python libraries in your system
+- numpy==1.11.1
+- scipy==0.18.1
+- six==1.10.0
+- gensim==0.12.4
+- scikit-learn==0.16.1
+- beautifulsoup4==4.3.2
+- matplotlib==1.4.3
+- Theano==0.7.0
+- Keras==0.3.1
+- h5py==2.6.0
+
+2. Download the data from Twitter for all the drugs in the file "drugs.txt" by running the following commands:
+- python datafetch.py  
+- python format_tweets.py
+
+3. Run the pre-trained model by running the following command:
+./prep_train_test.sh
+
+The output would be stored in the file model_output/mytest/predictions/run_adr_file
+
+To upload the data to a mongodb database, use the command python upload_mongo.py by updating the values of your uri and database name. 
+
 
 ### ui
 
