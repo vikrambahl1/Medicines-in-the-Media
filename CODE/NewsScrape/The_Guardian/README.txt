@@ -16,5 +16,11 @@ The Guardian is nice enough to allow programmatic access to its articles, but th
 
 ## Usage
 Set your variables in the config file (copy settings_example.cfg to settings.cfg).
+You will need to add the following directories in the same location as getGuardianArticles.py for proper operation:
+log/
+output/
+tempdata/
+tempdata/articles/
+
 
 ```python getGuardianArticles.py```
