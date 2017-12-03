@@ -12,31 +12,6 @@ Please cite the following if you use these resources in your own work:
 
 ### Quick Start
 
-1. Ensure your Python environment has all the requirements listed in ./src/requirements.txt, in particular [Theano](http://deeplearning.net/software/theano/install.html) (v0.7.0) and [Keras]() (v0.3.1). We used an [Enthought Canopy Python distribution](https://store.enthought.com/downloads/#default) to cover the rest. 
-
-2. Download the original [Twitter ADR Dataset v1.0](http://diego.asu.edu/Publications/ADRMine.html) and the [word2vec\_twitter\_model](http://www.fredericgodin.com/software/) from the respective dataset authors by running this script:
-
-	``
-	./download_orig_datasets.sh
-	``
-	
-3. It is against Twitter's Terms of Service to publish the text of tweets, so we (and the original Twitter ADR Dataset v1.0 authors) have provided tweet ID's instead, and a script to download the text of each annotated tweet directly from Twitter. Run it with the following command:
-
-	``
-	python ./download_tweets.py
-	``
-
-	Note that you will see numerous errors of the type `Error downloading tweet 327323676317974528`. This is because you cannot retrieve tweets by users with deleted or private accounts. It is a violation of the Twitter terms of use to distribute full-text tweets for deleted or private accounts.
-
-4. Prepare the dataset (by running `prep.py`), and train, validate, and test the model (with `adr_label.py`). We've provided an example script that will allow you to create a 90/10 train/validation split from within the combined ASU and CHOP training sets, train the BLSTM, and test on the combined ASU and CHOP test sets:
-
-	``
-	./prep_train_test.sh
-	``
-	
-------
-
-### TL;DR
 
 #### Contents
 2. Files & Directories
