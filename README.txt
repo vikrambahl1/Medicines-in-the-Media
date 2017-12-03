@@ -18,22 +18,34 @@ into MongoDB.
 ### data
 
 #### Postgres
-Download and Postgres - https://www.postgresql.org/download/
+1. Download and Postgres - https://www.postgresql.org/download/
+2. Run CODE/data/database/ddl.sql
 
 #### Mongo
 Download and install MongoDB - https://www.mongodb.com/download-center
 
-#### Prescribing Data
-TODO
-
-#### FDA Adverse Event Data
-TODO
+#### DataGrip (Optional)
+For easy of use in importing and exploring data - https://www.jetbrains.com/datagrip/download/#section=mac
 
 #### Medication Vocabulary
-TODO
+1. Download data files from https://athena.odysseusinc.com/search-terms/terms
+2. Create an account, use the default settings, make sure RxNorm, and NDC are checked.
+3. Download CSVs
+4. Import into concept and drug tables
+
+#### Prescribing Data
+1. Download each CSV from 1992 to 2017 - https://data.medicaid.gov/browse?category=State+Drug+Utilization&limitTo=datasets
+2. Import into `medicaid_data`
+3. Map drug concept names, using files in CODE/data/database (ndc_lookup.sql, ndc_map.sql, insert_ndc_lookup_modified.sql, update_medicaid_ndc_data.sql)
+
+#### FDA Adverse Event Data
+1. Download FAERS data in ASCII format - https://www.fda.gov/Drugs/GuidanceComplianceRegulatoryInformation/Surveillance/AdverseDrugEffects/ucm082193.htm
+2. Import into `faers_demo`, `faers_drug`, `faers_outcome`
+3. Map drug concept names
 
 #### FDA Approval Data
-TODO
+1. Import CODE/data/raw_data/FDA_products.txt into `fda_approvals`.
+2. Map into `events` table with event type `FDA_APPROVAL`.
 
 ### api
 
@@ -43,12 +55,12 @@ TODO
 #### Media Scraping
 TODO
 
-(This is then loaded into events table.)
+(This is then loaded into events table as event type `ARTICLE`.)
 
 #### Twitter ADR Detection
 TODO
 
-(This is then loaded into events table.)
+(This is then loaded into events table as event type `ADR`.)
 
 ### ui
 
@@ -66,6 +78,7 @@ TODO
 ## EXECUTION
 
 ### api
+TODO
 
 ### ui
 From CODE/ui, run `npm run serve`, the application will be running on port 9000
