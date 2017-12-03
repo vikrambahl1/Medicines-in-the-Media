@@ -16,5 +16,9 @@ The New York Times is nice enough to allow programmatic access to its articles, 
 
 ## Usage
 Set your variables in the config file (copy settings_example.cfg to settings.cfg).
+You will need to add the following directories in the same location as getTimesArticles.py for proper operation:
+json/
+log/
+output/
 
 ```python getTimesArticles.py```
