@@ -26,7 +26,7 @@ http://medicine.usnewsmap.com/?q=fluoxetine
 ### data
 
 #### Postgres
-1. Download and Postgres - https://www.postgresql.org/download/
+1. Download and install Postgres - https://www.postgresql.org/download/
 2. Run CODE/data/database/ddl.sql
 
 #### Mongo
@@ -37,23 +37,23 @@ For easy of use in importing and exploring data - https://www.jetbrains.com/data
 
 #### Medication Vocabulary
 1. Download data files from https://athena.odysseusinc.com/search-terms/terms
-2. Create an account, use the default settings, make sure RxNorm, and NDC are checked.
-3. Download CSVs
-4. Import into concept and drug tables
+2. Create an account
+3. Download CSVs, use the default settings, make sure RxNorm, and NDC are checked.
+4. Import into Postgres concept and drug tables
 
 #### Prescribing Data
 1. Download each CSV from 1992 to 2017 - https://data.medicaid.gov/browse?category=State+Drug+Utilization&limitTo=datasets
-2. Import into `medicaid_data`
+2. Import into `medicaid_data` in Postgres
 3. Map drug concept names, using files in CODE/data/database (ndc_lookup.sql, ndc_map.sql, insert_ndc_lookup_modified.sql, update_medicaid_ndc_data.sql)
 
 #### FDA Adverse Event Data
 1. Download FAERS data in ASCII format - https://www.fda.gov/Drugs/GuidanceComplianceRegulatoryInformation/Surveillance/AdverseDrugEffects/ucm082193.htm
-2. Import into `faers_demo`, `faers_drug`, `faers_outcome`
+2. Import into `faers_demo`, `faers_drug`, `faers_outcome` in Postgres
 3. Map drug concept names
 
 #### FDA Approval Data
-1. Import CODE/data/raw_data/FDA_products.txt into `fda_approvals`.
-2. Map into `events` table with event type `FDA_APPROVAL`.
+1. Import CODE/data/raw_data/FDA_products.txt into `fda_approvals`
+2. Map into `events` table with event type `FDA_APPROVAL` in Postgres
 
 ### api
 
@@ -64,7 +64,7 @@ For easy of use in importing and exploring data - https://www.jetbrains.com/data
 1. Run CODE/NewsScrape/NYT/getTimesArticles.py to gather all articles (up to 1000 in total) from the past 25 years on the top 125 drugs by prescription volume, sorted by relevance
 2. Run CODE/NewsScrape/The_Guardian/getGuardianArticles.py to gather all articles (no limit) from the past 25 years on the top 125 drugs by prescription volume, sorted by relevance
 3. Using a text editor, combine the two outputs into a single file.
-4. Import int 'events' table with event type 'ARTICLE'
+4. Import int 'events' table with event type 'ARTICLE' in Postgres
 
 #### Twitter ADR Detection
 
