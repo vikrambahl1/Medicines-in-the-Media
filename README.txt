@@ -66,7 +66,6 @@ For easy of use in importing and exploring data - https://www.jetbrains.com/data
 3. Using a text editor, combine the two outputs into a single file.
 4. Import int 'events' table with event type 'ARTICLE'
 
-
 #### Twitter ADR Detection
 
 1.Setup the following python libraries in your system
@@ -113,3 +112,6 @@ From CODE/api, `FLASK_APP=api.py flask run`, the application will be running on 
 
 ### ui
 From CODE/ui, run `npm run serve`, the application will be running on port 9001 (or change port in package.json)
+
+## REFERENCES
+1. A Cocos, AG Fiks, and AJ Masino. “Deep learning for pharmacovigilance: recurrent neural network architectures for labeling adverse drug reactions in Twitter posts”. In:Journal  of  the  American  Medical  InformaticsAssociation24.4 (2017), pp. 813–821.doi:10.1093/jamia/ocw180
