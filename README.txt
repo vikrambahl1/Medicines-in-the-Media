@@ -99,6 +99,7 @@ To upload the data to a mongodb database, use the command python upload_mongo.py
 2. Get your API keys and set them in CODE/ui/src/Detail.jsx
 3. Install node - https://nodejs.org/en/download/
 4. Install webpack globally - https://webpack.js.org/guides/installation/
+5. Update API url if pointing to a local API.
 
 #### Node
 5. From CODE/ui, run `npm install`
